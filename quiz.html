@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background: rgb(241, 150, 150);
+        }
+
+
+        .container {
+            widows: 100%;
+            height: 100%;
+        }
+
+        .btn {
+            height: 10vh;
+            margin: 10px 10px 10px 10px;
+        }
+
+        #quiz {
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="menugame">
+            <h1 id="name_q"></h1>
+            <p id="title_q"></p>
+            <div class="row">
+                <button type="button" class="btn btn-primary col ch" onclick="start()">เริ่ม</button>
+                <button type="button" class="btn btn-primary col ch" onclick="">บทเรียน</button>
+            </div>
+
+        </div>
+        <div id="quiz">
+            <div class="row header">
+                <div class="header">
+                    <h2 id="q_head"></h2>
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary col ch" onclick="ans(0)">Primary</button>
+                <button type="button" class="btn btn-secondary col ch" onclick="ans(1)">Secondary</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-success col ch" onclick="ans(2)">Success</button>
+                <button type="button" class="btn btn-danger col ch" onclick="ans(3)">Danger</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var now = 0;
+        var score = 0;
+        const quiz = {
+            name: "test",
+            title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, aperiam ipsa quos sequi molestiae quasi. Quo dolores ullam eum soluta, rerum, suscipit in distinctio explicabo accusantium itaque cumque, dolorum facere?",
+            myQuestions: [
+                {
+                    question: "Who is the strongest?",
+                    answers: [
+                        "Superman",
+                        "The Terminator",
+                        "Waluigi, obviously",
+                        "5"
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "What is the best site ever created?",
+                    answers: [
+                        "SitePoint",
+                        "Simple Steps Code",
+                        "Trick question; they're both the best",
+                        "6"
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "Where is Waldo really?",
+                    answers: [
+                        "Antarctica",
+                        "Exploring the Pacific Ocean",
+                        "Sitting in a tree",
+                        "Minding his own business, so stop asking"
+                    ],
+                    correctAnswer: 3
+                }
+            ]
+        }
+        init()
+        function init() {
+            document.getElementById("name_q").innerText = "ยินดีตอนรับสู่ Quiz :" + quiz.name;
+            document.getElementById("title_q").innerText = quiz.title
+        }
+        function start() {
+            document.getElementById("quiz").style.display = "block"
+            document.getElementById("menugame").style.display = "none"
+            new_q();
+        }
+        function ans(num) {
+            if (num == quiz.myQuestions[now].correctAnswer) {
+                score += 1;
+            }
+            now += 1;
+            new_q();
+
+        }
+        function new_q() {
+            if (now == quiz.myQuestions.length) {
+                return alert(score)
+            }
+            var question = document.getElementById("q_head")
+            question.innerText = quiz.myQuestions[now].question;
+            var ch = document.getElementsByClassName("ch");
+            for (var i = 0; i < 4; i++) {
+                ch[i].innerText = quiz.myQuestions[now].answers[i]
+            }
+        }
+    </script>
+</body>
+
+</html>
