@@ -1,0 +1,52 @@
+body{
+    background-color: bisque;
+}
+h1{
+    font-family: 'Kanit', sans-serif;
+}
+p{
+    font-family: 'Sarabun', sans-serif;
+}
+footer{
+    margin-top: 50%;
+    /* height: 10%; */
+    background-color: burlywood;
+    text-align: left;
+
+}
+.pho{
+    border: 2px solid;
+    width: 10%;
+    height: 30%;
+    padding: 20%;
+    padding-top: 15%;
+    padding-left: 10%;
+    margin-top: 5%;
+    margin-left: 20%;
+
+
+}
+
+
+h1{
+    margin: 3%;
+}
+p{
+
+}
+img{
+    width: 4%;
+}
+
+.next{
+    margin-right: 40%;
+}
+.plus{
+    margin-right: 1%;
+}
+.minus{
+    margin-right: 1%;
+}
+.logo{
+    margin-left: 30%;
+}
