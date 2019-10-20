@@ -45,8 +45,8 @@
             <h1 id="name_q"></h1>
             <p id="title_q"></p>
             <div class="row">
-                <button type="button" class="btn btn-primary col ch" onclick="start()">เริ่ม</button>
-                <button type="button" class="btn btn-primary col ch" onclick="">บทเรียน</button>
+                <button type="button" class="btn btn-primary col" onclick="start()">เริ่ม</button>
+                <button type="button" class="btn btn-primary col" onclick="">บทเรียน</button>
             </div>
 
         </div>
@@ -132,8 +132,11 @@
             var question = document.getElementById("q_head")
             question.innerText = quiz.myQuestions[now].question;
             var ch = document.getElementsByClassName("ch");
+            console.log(ch)
             for (var i = 0; i < 4; i++) {
                 ch[i].innerText = quiz.myQuestions[now].answers[i]
+                
+                console.log(quiz.myQuestions[now].answers[i])
             }
         }
     </script>
