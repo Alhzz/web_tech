@@ -653,7 +653,7 @@ h1, h2, h3, h4, h5,
   .intro-section:after {
     content: "";
     position: absolute;
-    background-image: url('../images/bg.jpeg');
+    background-image: url('../images/bg.jpg');
     top: 0;
     left: 0;
     right: 0;
