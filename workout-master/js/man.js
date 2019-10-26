@@ -1,8 +1,18 @@
-var dict = [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. เย้1", "2. ย้ง2", "3.ย้าก3", "4.โย่ว45"], "ans": 3 }]
+var dict = [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var clause = 0
 var point = 0
+var id;
+var id2;
 var choice = ["id1", "id2", "id3", "id4"];
 function make() {
+    if (clause != 0) {
+        document.getElementById(id).style.backgroundColor = "";
+        document.getElementById(id2).style.backgroundColor = "";
+    }
+    problem.removeChild(problem.childNodes[0]);
+    for (var i in choice) {
+        document.getElementById(choice[i]).removeChild(document.getElementById(choice[i]).childNodes[0]);
+    }
 
     if (dict[clause]["problem"][0] == "text") {
         var node = document.createElement("H2");
@@ -24,14 +34,29 @@ function make() {
     }
 }
 function check(ans) {
+
     if (ans == dict[clause]["ans"]) {
+        id = "ans" + ans;
+        document.getElementById(id).style.backgroundColor = "green";
         point++;
     }
-    problem.removeChild(problem.childNodes[1]);
-    for (var i in choice) {
-        document.getElementById(choice[i]).removeChild(document.getElementById(choice[i]).childNodes[1]);
+    else {
+        id = "ans" + ans;
+        id2 = "ans" + dict[clause]["ans"];
+        document.getElementById(id).style.backgroundColor = "#B22222";
+        document.getElementById(id2).style.backgroundColor = "#006400";
     }
     clause++;
-    make();
+    if (clause < dict.length) {
+
+        setTimeout(function () { make() }, 1500);
+
+    }
+    else {
+        setTimeout(function () { window.location = "answer.html"; }, 500);
+    }
+
+
 }
-make();
+if (clause == 0){
+make();}
