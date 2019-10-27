@@ -1,10 +1,11 @@
 var dict = [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var clause = 0
 var point = 0
-var id;
-var id2;
+var id = "ans1";
+var id2 = "ans1";
 var choice = ["id1", "id2", "id3", "id4"];
 function make() {
+    document.getElementById("ch").innerHTML = "ข้อ : "+(clause+1)+" / "+dict.length;
     if (clause != 0) {
         document.getElementById(id).style.backgroundColor = "";
         document.getElementById(id2).style.backgroundColor = "";
@@ -53,11 +54,17 @@ function check(ans) {
 
     }
     else {
-        setTimeout(function () { window.location = "answer.html"; }, 500);
+        setTimeout(function () { document.getElementById('end').style.display = 'block'; total.innerText = point;  }, 750);
     }
 
 
 }
-
+function start(){
+    window.location.reload();   //รีเฟรซหน้า (เหมือน F5)
+    document.getElementById('endGame').style.display = 'none';  //ซ่อนหน้า endGame
+}
+function go(){
+    window.location.href = "answer.html";
+}
 make();
 
