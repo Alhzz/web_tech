@@ -58,5 +58,6 @@ function check(ans) {
 
 
 }
-if (clause == 0){
-make();}
+
+make();
+
