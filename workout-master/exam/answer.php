@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,101 +114,21 @@
                 <h1>เฉลย</h1>
                 <div class="form-check">
                     <div class="row">
-                        <!--  ข้อ 1-->
-                        <div class="col-lg-12">
-                            <div class="d-flex align-items-center">
-                                <div class="problem">
-                                    <h3>อะไรเอ่ย</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="class-item d-flex align-items-center">
-                                        <div class="class-item-text ans">
-                                            <input class="form-check-input" type="radio" name="p1" id="p1"
-                                                value="option1" checked>
-                                            <h2>ง. ปากเอ่ย</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  ข้อ 2-->
-                        <div class="col-lg-12">
-                            <div class="d-flex align-items-center">
-                                <div class="problem">
-                                    <h3>อะไรเอ่ย</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="class-item d-flex align-items-center">
-                                        <div class="class-item-text ans">
-                                            <input class="form-check-input" type="radio" name="p2" id="p2"
-                                                value="option1" checked>
-                                            <h2>ข. ถูกจ้า</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  ข้อ 3-->
-                        <div class="col-lg-12">
-                            <div class="d-flex align-items-center">
-                                <div class="problem">
-                                    <h3>อะไรเอ่ย</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="class-item d-flex align-items-center">
-                                        <div class="class-item-text ans">
-                                            <input class="form-check-input" type="radio" name="p1" id="p1"
-                                                value="option1" checked>
-                                            <h2>ง. ปากเอ่ย</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  ข้อ 4-->
-                        <div class="col-lg-12">
-                            <div class="d-flex align-items-center">
-                                <div class="problem">
-                                    <h3>อะไรเอ่ย</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="class-item d-flex align-items-center">
-                                        <div class="class-item-text ans">
-                                            <input class="form-check-input" type="radio" name="p2" id="p2"
-                                                value="option1" checked>
-                                            <h2>ข. ถูกจ้า</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  ข้อ 5-->
-                        <div class="col-lg-12">
-                            <div class="d-flex align-items-center">
-                                <div class="problem">
-                                    <h3>อะไรเอ่ย</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="class-item d-flex align-items-center">
-                                        <div class="class-item-text ans">
-                                            <input class="form-check-input" type="radio" name="p2" id="p2"
-                                                value="option1" checked>
-                                            <h2>ข. ถูกจ้า</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+
+                        $problem = $_SESSION['problem'];
+                        $choice = $_SESSION['choice'];
+                        $ans = $_SESSION['ans']; 
+
+                        for($i = 0; $i < count($problem); $i++){
+                            echo '<div class="col-lg-12"><div class="d-flex align-items-center"><div class="problem">';
+                            echo '<h3>'.$problem[$i].'</h3>';
+                            echo ' </div></div>';
+                            echo '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center"><div class="class-item-text ans">';
+                            echo '<h2>'.$choice[$i][$ans[$i]-1].'</h2>';
+                            echo '</div></div></div></div></div>';
+                        }
+                        ?>
                     </div>
                 </div>
                 <a href="../index.html" class="btn btn-primary float-right "> ไปหน้าแรก </a>
