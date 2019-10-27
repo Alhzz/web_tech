@@ -138,9 +138,9 @@
                             );
                             $p6_ans = array(2, 4);
 
-                            $_SESSION['problem'] = ${'p' . $which . '_problem'};
-                            $_SESSION['choice'] = ${'p' . $which . '_choice'};
-                            $_SESSION['ans'] = ${'p' . $which . '_ans'};
+                            $_COOKIE['problem'] = ${'p' . $which . '_problem'};
+                            $_COOKIE['choice'] = ${'p' . $which . '_choice'};
+                            $_COOKIE['ans'] = ${'p' . $which . '_ans'};
 
 
 
