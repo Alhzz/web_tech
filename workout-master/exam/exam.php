@@ -106,7 +106,7 @@
 
         <div class="site-section">
             <div class="container">
-                <form action="ans.php" method="post" id="form" name="form">
+                <form action="answer.php" method="post" id="form" name="form">
                     <div class="form-check">
                         <div class="row">
                             <?php
@@ -138,28 +138,28 @@
                             );
                             $p6_ans = array(2, 4);
 
-                            $_SESSION['problem'] = ${'p'.$which.'_problem'};
-                            $_SESSION['choice'] = ${'p'.$which.'_choice'};
-                            $_SESSION['ans'] = ${'p'.$which.'ans'};
-                            
+                            $_SESSION['problem'] = ${'p' . $which . '_problem'};
+                            $_SESSION['choice'] = ${'p' . $which . '_choice'};
+                            $_SESSION['ans'] = ${'p' . $which . '_ans'};
 
 
-                            for ($i = 0; $i < count(${'p'.$which.'_problem'}); $i++) {
+
+                            for ($i = 0; $i < count(${'p' . $which . '_problem'}); $i++) {
                                 echo '<div class="col-lg-12">';
                                 echo '<div class="d-flex align-items-center"><div class="problem">';
-                                echo '<h2>' . ${'p'.$which.'_problem'}[$i] . '</h2>';
+                                echo '<h2>' . ${'p' . $which . '_problem'}[$i] . '</h2>';
                                 echo '</div></div><div class="row"><div class="col-lg-6">';
                                 for ($j = 0; $j < 2; $j++) {
                                     echo '<div class="class-item d-flex align-items-center">';
-                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p'.$i.'" id="p'.$i.'" value="option'.$j.'">';
-                                    echo '<h2>' . ${'p'.$which.'_choice'}[$i][$j] . '</h2>';
+                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="option' . $j . '">';
+                                    echo '<h2>' . ${'p' . $which . '_choice'}[$i][$j] . '</h2>';
                                     echo '</div></div>';
                                 }
                                 echo '</div><div class="col-lg-6">';
                                 for ($j = 2; $j < 4; $j++) {
                                     echo '<div class="class-item d-flex align-items-center">';
-                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p'.$i.'" id="p'.$i.'" value="option'.$j.'">';
-                                    echo '<h2>' . ${'p'.$which.'_choice'}[$i][$j] . '</h2>';
+                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="option' . $j . '">';
+                                    echo '<h2>' . ${'p' . $which . '_choice'}[$i][$j] . '</h2>';
                                     echo '</div></div>';
                                 }
                                 echo '</div></div></div>';
@@ -167,8 +167,11 @@
                             ?>
                         </div>
                     </div>
+                    <div class="btn btn-primary float-right" onclick="document.forms['form'].submit();">
+                        <h6>เสร็จแล้ว</h6>
+                    </div>
                 </form>
-                <a href="course_6.html" class="btn btn-primary float-right "> เสร็จแล้ว </a>
+
             </div>
         </div>
 
