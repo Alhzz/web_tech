@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -138,10 +142,10 @@
                             );
                             $p6_ans = array(2, 4);
 
-                            $_COOKIE['problem'] = ${'p' . $which . '_problem'};
-                            $_COOKIE['choice'] = ${'p' . $which . '_choice'};
-                            $_COOKIE['ans'] = ${'p' . $which . '_ans'};
-
+                            $_SESSION['problem'] = ${'p' . $which . '_problem'};
+                            $_SESSION['choice'] = ${'p' . $which . '_choice'};
+                            $_SESSION['ans'] = ${'p' . $which . '_ans'};
+                            
 
 
                             for ($i = 0; $i < count(${'p' . $which . '_problem'}); $i++) {
