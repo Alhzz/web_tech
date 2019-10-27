@@ -163,14 +163,14 @@
                                 echo '</div></div><div class="row"><div class="col-lg-6">';
                                 for ($j = 0; $j < 2; $j++) {
                                     echo '<div class="class-item d-flex align-items-center">';
-                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="option' . $j . '">';
+                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="'.$j.'">';
                                     echo '<h2>' . ${'p' . $which . '_choice'}[$i][$j] . '</h2>';
                                     echo '</div></div>';
                                 }
                                 echo '</div><div class="col-lg-6">';
                                 for ($j = 2; $j < 4; $j++) {
                                     echo '<div class="class-item d-flex align-items-center">';
-                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="option' . $j . '">';
+                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="'.$j.'">';
                                     echo '<h2>' . ${'p' . $which . '_choice'}[$i][$j] . '</h2>';
                                     echo '</div></div>';
                                 }

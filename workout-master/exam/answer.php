@@ -100,8 +100,22 @@
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
                     <div class="col-md-7">
-                        <h2 class="">คะแนนของคุณคือ 20</h2>
-                        <p class="lead mx-auto desc mb-5">เก่งมากเลยหละ</p>
+
+                    <?php 
+                        $problem = $_SESSION['problem'];
+                        $ans = $_SESSION['ans'];
+                        $score = 0;
+
+                        for($i = 0; $i < count($problem); $i++) {
+                            if ($ans[$i] == $_POST['p'.$i]+1) {
+                                $score += 10;
+                            }
+                        }
+
+                        echo '<h2 class="">คะแนนของคุณคือ '.$score.'</h2>';
+                        echo '<p class="lead mx-auto desc mb-5">คะแนนเต็ม '.(count($problem)*10).'</p>';
+                    ?>
+                        
                     </div>
                 </div>
             </div>
