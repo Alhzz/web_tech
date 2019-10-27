@@ -107,7 +107,7 @@
                         $score = 0;
 
                         for($i = 0; $i < count($problem); $i++) {
-                            if ($ans[$i] == $_POST['p'.$i]) {
+                            if ($ans[$i] == $_POST['p'.$i]+1) {
                                 $score += 10;
                             }
                         }
