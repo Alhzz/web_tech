@@ -99,8 +99,12 @@
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
                     <div class="col-md-7">
-                        <h2 class="">ชื่อเรื่อง</h2>
-                        <p class="lead mx-auto desc mb-5">ประถมศึกษา 4-6</p>
+                        <h2 class="">ตัวอย่างข้อสอบ</h2>
+                        <?php
+                        $which = $_GET['num'];
+                        echo '<p class="lead mx-auto desc mb-5">ชั้นประถมศึกษาปีที่ '.$which.'</p>';
+                        
+                        ?>
                     </div>
                 </div>
             </div>
