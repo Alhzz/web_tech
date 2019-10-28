@@ -15,7 +15,7 @@ var chapterP4_time = [{ "problem": ["text", "อ่ะ"], "choice": ["1. เย�
 // P5 --------------------------------------------------------------- P5 -------------------------------------------------------------
 //  {"problem": ["text/img" (เป็นโจทย์รูป หรือ ข้อความ), "โจทย์ หรือ ลิ้งรูป", "ข้อความเพิ่มเติม(ถ้ามีรูปแล้วอยากใส่ข้อความ)(ไม่ใส่ก็ได้)"]}
 var chapterP5_angle = [{ "problem": ["img", "http://www.trueplookpanya.com/data/product/examination/Q000022033.jpg", "1. มุม คขง เป็นมุมใด"], "choice": ["1. มุมแหลม", "2. มุมฉาก", "3. มุมตรง", "4. มุมป้าน"], "ans": 1 }, { "problem": ["text", "2. มุมฉาก มีขนาด กี่องศา"], "choice": ["1. มากกว่า 90 องศา", "2. น้อยกว่า 90 องศา", "3. 90 องศา", "4. ถูกทุกข้อ"], "ans": 3 }, { "problem": ["text", "3. มุมแหลม + มุมฉาก มีขนาดเท่ากับมุมใด"], "choice": ["1. มุมตรง", "2. มุมป้าน", "3. มุมกลับ", "4. มุมฉาก"], "ans": 2 }]
-var chapterP5_circle = [{ "problem": ["text", "1. รัศมี มีค่าเท่ากับเท่าใด"], "choice": ["1. 2 เท่าของเส้นผ่านศูนย์กลาง", "2. เส้นผ่านศูนย์กลาง", "3. ความยาวรอบรูปวงกลม", "4. ครึ่งนึ่งของเส้นผ่านศูนย์กลาง"], "ans": 4 }, { "problem": ["img", "../images/r.png", "2. รัศมี กี่ ซม."], "choice": ["1. 10 ซม.", "2. 20 ซม.", "3. 5 ซม.", "4. 5 เมตร"], "ans": 3 }]
+var chapterP5_circle = [{ "problem": ["text", "1. รัศมี มีค่าเท่ากับเท่าใด"], "choice": ["1. 2 เท่าของเส้นผ่านศูนย์กลาง", "2. เส้นผ่านศูนย์กลาง", "3. ความยาวรอบรูปวงกลม", "4. ครึ่งนึ่งของเส้นผ่านศูนย์กลาง"], "ans": 4 }, { "problem": ["img", "../images/r.jpg", "2. รัศมี กี่ ซม."], "choice": ["1. 10 ซม.", "2. 20 ซม.", "3. 5 ซม.", "4. 5 เมตร"], "ans": 3 }]
 var chapterP5_decimal = [{ "problem": ["text", "ohmyGoD"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP5_fraction = [{ "problem": ["text", "lol"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP5_geometry = [{ "problem": ["text", "กำ"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
@@ -44,14 +44,14 @@ var dict = { "100k":chapterP4_100K,"divi":chapterP4_divi, "measure":chapterP4_me
 
 var clause = 0
 var point = 0
-var id = "ans1";
-var id2 = "ans1";
+var id_1 = "ans1";
+var id_2 = "ans1";
 var choice = ["id1", "id2", "id3", "id4"];
 function make() {
     document.getElementById("ch").innerHTML = "ข้อ : "+(clause+1)+" / "+dict[chapter].length;
     if (clause != 0) {
-        document.getElementById(id).style.backgroundColor = "";
-        document.getElementById(id2).style.backgroundColor = "";
+        document.getElementById(id_1).style.backgroundColor = "";
+        document.getElementById(id_2).style.backgroundColor = "";
     }
     problem.querySelectorAll('*').forEach(n => n.remove()); 
     for (var i in choice) {
@@ -86,15 +86,15 @@ function make() {
 function check(ans) {
 
     if (ans == dict[chapter][clause]["ans"]) {
-        id = "ans" + ans;
-        document.getElementById(id).style.backgroundColor = "green";
+        id_1 = "ans" + ans;
+        document.getElementById(id_1).style.backgroundColor = "green";
         point++;
     }
     else {
-        id = "ans" + ans;
-        id2 = "ans" + dict[chapter][clause]["ans"];
-        document.getElementById(id).style.backgroundColor = "#B22222";
-        document.getElementById(id2).style.backgroundColor = "#006400";
+        id_1 = "ans" + ans;
+        id_2 = "ans" + dict[chapter][clause]["ans"];
+        document.getElementById(id_1).style.backgroundColor = "#B22222";
+        document.getElementById(id_2).style.backgroundColor = "#006400";
     }
     clause++;
     if (clause < dict[chapter].length) {
@@ -103,7 +103,7 @@ function check(ans) {
 
     }
     else {
-        setTimeout(function () { document.getElementById('end').style.display = 'block'; total.innerText = point;  }, 750);
+        setTimeout(function () { document.getElementById('end').style.display = 'block'; total.innerText = point;id1.style.display = 'none'; id2.style.display = 'none';id3.style.display = 'none';id4.style.display = 'none'; }, 750);
     }
 
 
@@ -119,4 +119,3 @@ if (window.location.pathname.split(/(\\|\/)/g).pop() == "test.php"){
     make();
 
 }
-
