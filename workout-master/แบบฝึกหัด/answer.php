@@ -125,7 +125,12 @@ session_start();
                                 if (dict[chapter][i]["problem"][0] == "text"){
                                     echo += '<h3>'+(i+1)+". "+ dict[chapter][i]["problem"][1] + '</h3>';}
                                 else{
-                                    echo += '<h3>'+(i+1)+". " +'<h3>'+'<img src="' + dict[chapter][i]["problem"][1] + '">';
+                                    let txt_p = i+1;
+                                    if(dict[chapter][i]["problem"].length == 3){
+                                        txt_p = dict[chapter][i]["problem"][2];
+                                    }
+
+                                    echo += '<h3>'+txt_p+". " +'<h3>'+'<img src="' + dict[chapter][i]["problem"][1] + '">';
                                 }
                                 echo += ' </div></div>';
                                 echo += '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center"><div class="class-item-text ans">';

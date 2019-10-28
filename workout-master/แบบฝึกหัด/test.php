@@ -65,7 +65,7 @@
         }
 
         .problem {
-            padding: 25px;
+            display: block;
         }
 
         .ans {
@@ -73,13 +73,15 @@
         }
 
         #man {
-            position: fixed;
-            bottom: 30px;
-            left: 5%;
+            position: absolute;
+            display: block;
+            top: 22rem;
+            left: 2.5%;
             width: 95%;
 
 
         }
+
     </style>
 
 </head>
@@ -127,7 +129,7 @@
                 <div class="row">
                     <h5 id="ch"></h5>
                     <div class="col-lg-12">
-                        <div class="mt-5 pt-4 align-items-center justify-content-center text-center">
+                        <div class="mt-5 pt-4 align-items-center justify-content-center text-center" class="problem">
                             <div class="problem" id="problem">
                             </div>
                         </div>
@@ -185,7 +187,7 @@
     <script>
         var chapter = "<?php echo $which ?>";
     </script>
-    
+
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/jquery-migrate-3.0.1.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
