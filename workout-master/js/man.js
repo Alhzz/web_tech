@@ -1,3 +1,4 @@
+
 // P4 --------------------------------------------------------------- P4 -------------------------------------------------------------
 var chapterP4_100K = [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP4_divi = [{ "problem": ["text", "อะไรเอยวะเนี้ย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
@@ -103,7 +104,10 @@ function start(){
     document.getElementById('endGame').style.display = 'none';  //ซ่อนหน้า endGame
 }
 function go(){
-    window.location.href = "answer.html";
+    window.location.href = "answer.php?chapter="+chapter;
 }
-make();
+if (window.location.pathname.split(/(\\|\/)/g).pop() == "test.php"){
+    make();
+
+}
 

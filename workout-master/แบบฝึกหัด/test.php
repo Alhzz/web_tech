@@ -182,9 +182,10 @@
     <?php
     $which = $_GET['chapter'];
     ?>
-    <script type="text/javascript">
+    <script>
         var chapter = "<?php echo $which ?>";
     </script>
+    
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/jquery-migrate-3.0.1.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
