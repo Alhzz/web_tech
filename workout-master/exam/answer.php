@@ -106,8 +106,12 @@ session_start();
                         $score = 0;
 
                         for ($i = 0; $i < count($problem); $i++) {
+                            try{
                             if ($ans[$i] == $_POST['p' . $i] + 1) {
                                 $score += 10;
+                            }}
+                            catch(Exception $e){
+                                $score = 0;
                             }
                         }
 
