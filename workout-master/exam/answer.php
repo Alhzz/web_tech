@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -86,8 +86,7 @@
                                 <li><a href="../index.html#trainer-section" class="nav-link">ผู้จัดทำ</a></li>
                             </ul>
                         </nav>
-                        <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span
-                                class="icon-menu h3"></span></a>
+                        <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>
                     </div>
 
                 </div>
@@ -101,21 +100,21 @@
                 <div class="row align-items-center justify-content-center text-center">
                     <div class="col-md-7">
 
-                    <?php 
+                        <?php
                         $problem = $_SESSION['problem'];
                         $ans = $_SESSION['ans'];
                         $score = 0;
 
-                        for($i = 0; $i < count($problem); $i++) {
-                            if ($ans[$i] == $_POST['p'.$i]+1) {
+                        for ($i = 0; $i < count($problem); $i++) {
+                            if ($ans[$i] == $_POST['p' . $i] + 1) {
                                 $score += 10;
                             }
                         }
 
-                        echo '<h2 class="">คะแนนของคุณคือ '.$score.'</h2>';
-                        echo '<p class="lead mx-auto desc mb-5">คะแนนเต็ม '.(count($problem)*10).'</p>';
-                    ?>
-                        
+                        echo '<h2 class="">คะแนนของคุณคือ ' . $score . '</h2>';
+                        echo '<p class="lead mx-auto desc mb-5">คะแนนเต็ม ' . (count($problem) * 10) . '</p>';
+                        ?>
+
                     </div>
                 </div>
             </div>
@@ -132,14 +131,14 @@
 
                         $problem = $_SESSION['problem'];
                         $choice = $_SESSION['choice'];
-                        $ans = $_SESSION['ans']; 
+                        $ans = $_SESSION['ans'];
 
-                        for($i = 0; $i < count($problem); $i++){
+                        for ($i = 0; $i < count($problem); $i++) {
                             echo '<div class="col-lg-12"><div class="d-flex align-items-center"><div class="problem">';
-                            echo '<h3>'.$problem[$i].'</h3>';
+                            echo '<h3>' . $problem[$i] . '</h3>';
                             echo ' </div></div>';
                             echo '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center"><div class="class-item-text ans">';
-                            echo '<h2>'.$choice[$i][$ans[$i]-1].'</h2>';
+                            echo '<h2>' . $choice[$i][$ans[$i] - 1] . '</h2>';
                             echo '</div></div></div></div></div>';
                         }
                         ?>
@@ -169,34 +168,34 @@
 
                     <div class="col-md-4">
                         <h3 class="text-white">ข้อมูลเพิ่มเติม</h3>
-                        <p>สามารถดูข้อมูลเพิ่มเติมได้ที่ <a
-                                href="https://github.com/Alhzz/web_tech">github.com/Alhzz/web_tech</a></p>
+                        <p>สามารถดูข้อมูลเพิ่มเติมได้ที่ <br><a href="http://10.0.15.12/wtprojects/wtpg26">wtprojects/wtpg26</a></p>
                     </div>
-
                 </div>
 
-                <div class="row pt-5 mt-5 text-center">
-                    <div class="col-md-12">
-                        <div class=" pt-5">
-                            <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script data-cfasync="false"
-                                    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved |
-                                This
-                                template is made
-                                with
-                                <i class="icon-heart text-danger" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-        </footer>
+
+            <div class="row pt-5 mt-5 text-center">
+                <div class="col-md-12">
+                    <div class=" pt-5">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved |
+                            This
+                            template is made
+                            with
+                            <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    </footer>
 
     </div>
     <!-- .site-wrap -->
