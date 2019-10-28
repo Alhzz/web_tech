@@ -1,5 +1,6 @@
 
 // P4 --------------------------------------------------------------- P4 -------------------------------------------------------------
+//  {"problem": ["text/img" (เป็นโจทย์รูป หรือ ข้อความ), "โจทย์ หรือ ลิ้งรูป", "ข้อความเพิ่มเติม(ถ้ามีรูปแล้วอยากใส่ข้อความ)(ไม่ใส่ก็ได้)"]}
 var chapterP4_100K = [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP4_divi = [{ "problem": ["text", "อะไรเอยวะเนี้ย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP4_measure = [{ "problem": ["text", "ohmyGoD"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
@@ -12,7 +13,8 @@ var chapterP4_time = [{ "problem": ["text", "อ่ะ"], "choice": ["1. เย�
 
 
 // P5 --------------------------------------------------------------- P5 -------------------------------------------------------------
-var chapterP5_angle = [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
+//  {"problem": ["text/img" (เป็นโจทย์รูป หรือ ข้อความ), "โจทย์ หรือ ลิ้งรูป", "ข้อความเพิ่มเติม(ถ้ามีรูปแล้วอยากใส่ข้อความ)(ไม่ใส่ก็ได้)"]}
+var chapterP5_angle = [{ "problem": ["img", "http://www.trueplookpanya.com/data/product/examination/Q000022033.jpg", "1. มุม คขง เป็นมุมใด"], "choice": ["1. มุมแหลม", "2. มุมฉาก", "3. มุมตรง", "4. มุมป้าน"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP5_circle = [{ "problem": ["text", "อะไรเอยวะเนี้ย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP5_decimal = [{ "problem": ["text", "ohmyGoD"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP5_fraction = [{ "problem": ["text", "lol"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
@@ -24,6 +26,7 @@ var chapterP5_triangle = [{ "problem": ["text", "อ่ะ"], "choice": ["1. เ
 
 
 // P6 --------------------------------------------------------------- P6 -------------------------------------------------------------
+//  {"problem": ["text/img" (เป็นโจทย์รูป หรือ ข้อความ), "โจทย์ หรือ ลิ้งรูป", "ข้อความเพิ่มเติม(ถ้ามีรูปแล้วอยากใส่ข้อความ)(ไม่ใส่ก็ได้)"]}
 var chapterP6_1= [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP6_2 = [{ "problem": ["text", "อะไรเอยวะเนี้ย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
 var chapterP6_3= [{ "problem": ["text", "ohmyGoD"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
@@ -50,7 +53,7 @@ function make() {
         document.getElementById(id).style.backgroundColor = "";
         document.getElementById(id2).style.backgroundColor = "";
     }
-    problem.removeChild(problem.childNodes[0]);
+    problem.querySelectorAll('*').forEach(n => n.remove()); 
     for (var i in choice) {
         document.getElementById(choice[i]).removeChild(document.getElementById(choice[i]).childNodes[0]);
     }
@@ -63,6 +66,12 @@ function make() {
     }
     else {
         var img = document.createElement("img");
+        if(dict[chapter][clause]["problem"].length == 3){
+            var node = document.createElement("H3");
+            var textnode = document.createTextNode(dict[chapter][clause]["problem"][2]);
+            node.appendChild(textnode);
+            document.getElementById("problem").appendChild(node);
+        }
         img.src = dict[chapter][clause]["problem"][1];
         var src = document.getElementById("problem");
         src.appendChild(img);
