@@ -105,14 +105,23 @@ session_start();
                         $ans = $_SESSION['ans'];
                         $score = 0;
 
+                        function errorHandlerCatchUndefinedIndex($errno, $errstr, $errfile, $errline ) {
+                            // In case Undefined index
+                            if (substr($errstr, 0, 16) == 'Undefined index:' or 'Undefined offset') {
+                             throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
+                           } 
+                            return false;
+                        }
                         for ($i = 0; $i < count($problem); $i++) {
+                            set_error_handler("errorHandlerCatchUndefinedIndex");
                             try{
                             if ($ans[$i] == $_POST['p' . $i] + 1) {
                                 $score += 10;
                             }}
                             catch(Exception $e){
-                                $score = 0;
+                                restore_error_handler();
                             }
+                            restore_error_handler();
                         }
 
                         echo '<h2 class="">คะแนนของคุณคือ ' . $score . '</h2>';
