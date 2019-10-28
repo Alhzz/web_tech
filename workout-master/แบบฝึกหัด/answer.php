@@ -123,9 +123,9 @@ session_start();
                             for (let i = 0; i < dict[chapter].length; i++) {
                                 echo += '<div class="col-lg-12"><div class="d-flex align-items-center"><div class="problem">';
                                 if (dict[chapter][i]["problem"][0] == "text"){
-                                    echo += '<h3>' + dict[chapter][i]["problem"][1] + '</h3>';}
+                                    echo += '<h3>'+(i+1)+". "+ dict[chapter][i]["problem"][1] + '</h3>';}
                                 else{
-                                    echo += '<img src="' + dict[chapter][i]["problem"][1] + '">';
+                                    echo += '<h3>'+(i+1)+". " +'<h3>'+'<img src="' + dict[chapter][i]["problem"][1] + '">';
                                 }
                                 echo += ' </div></div>';
                                 echo += '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center"><div class="class-item-text ans">';
