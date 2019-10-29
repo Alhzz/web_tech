@@ -1,4 +1,5 @@
 
+var chapter = window.location.search.split("=")[1]
 // P4 --------------------------------------------------------------- P4 -------------------------------------------------------------
 //  {"problem": ["text/img" (เป็นโจทย์รูป หรือ ข้อความ), "โจทย์ หรือ ลิ้งรูป", "ข้อความเพิ่มเติม(ถ้ามีรูปแล้วอยากใส่ข้อความ)(ไม่ใส่ก็ได้)"]}
 var chapterP4_100K = [{ "problem": ["text", "อะไรเอย"], "choice": ["1. เย้", "2. ย้ง", "3.ย้าก", "4.โย่ว"], "ans": 4 }, { "problem": ["img", "http://www.google.com/intl/en_com/images/logo_plain.png"], "choice": ["1. บากะ", "2. lol", "3.อยากเล่นเกม", "4.5555+"], "ans": 3 }, { "problem": ["text", "อะไรวะ"], "choice": ["1. กำ", "2. โฮโฮ", "3.Dio", "4.jojo"], "ans": 1 }]
@@ -113,9 +114,9 @@ function start(){
     document.getElementById('endGame').style.display = 'none';  //ซ่อนหน้า endGame
 }
 function go(){
-    window.location.href = "answer.php?chapter="+chapter;
+    window.location.href = "answer.html?chapter="+chapter;
 }
-if (window.location.pathname.split(/(\\|\/)/g).pop() == "test.php"){
+if (window.location.pathname.split(/(\\|\/)/g).pop() == "test.html"){
     make();
 
 }
