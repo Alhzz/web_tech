@@ -81,13 +81,12 @@ session_start();
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li><a onclick="window.location.href='../index.html#'" href="../index.html#" class="nav-link">หน้าแรก</a></li>
-                                <li><a onclick="window.location.href='../index.html#course-section'"  href="../index.html#course-section" class="nav-link">บทเรียน</a></li>
-                                <li><a onclick="window.location.href='../index.html#schedule-section'"  href="../index.html#schedule-section" class="nav-link">แบบฝึกหัด</a></li>
+                                <li><a onclick="window.location.href='../index.html#course-section'" href="../index.html#course-section" class="nav-link">บทเรียน</a></li>
+                                <li><a onclick="window.location.href='../index.html#schedule-section'" href="../index.html#schedule-section" class="nav-link">แบบฝึกหัด</a></li>
                                 <li><a onclick="window.location.href='../index.html#trainer-section'" href="../index.html#trainer-section" class="nav-link">ผู้จัดทำ</a></li>
                             </ul>
                         </nav>
-                        <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span
-                                class="icon-menu h3"></span></a>
+                        <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>
                     </div>
 
                 </div>
@@ -123,16 +122,18 @@ session_start();
 
                             //Add Here
                             //Grade 4
-                            $p4_problem = array("1. กายสูง 7 เมตร แอ้นสูง 3 เมตร กายสูงกว่าแอ้นกี่เมตร", 
-                            "2. ภูมิมีโกโก้อยู่ 3 แก้วและปองมีโกโก้อยู่ 18 แก้ว รวมกันเป็นกี่แก้ว?", 
-                            "3. พี่ไม้มีน้ำตาล 16 ช้อน จะแบ่งใส่จานละเท่าๆกันจะได้กี่จาน?",
-                            "4. ขณะนี้เวลา 11.30 นาฬิกา อ่านอย่างไร",
-                            "5. เศษหนึ่งส่วนแปดสามารถเขียนในอีกรูปแบบหนึ่งได้อย่างไร",
-                            "6. 8.30 อ่านเป็นหน่วยสตางค์และบาทอย่างไร",
-                            "7. หน่วยในข้อใดมีความยาวมากที่สุด",
-                            "8. 1,980,000 อ่านว่าอะไร",
-                            "9. 2 x 18 จะได้ผลลัพธ์เป็นเท่าไหร่",
-                            "10 (8 - 4) + 12) จะได้ผลลัพธ์เป็นเท่าไหร่");
+                            $p4_problem = array(
+                                "1. กายสูง 7 เมตร แอ้นสูง 3 เมตร กายสูงกว่าแอ้นกี่เมตร",
+                                "2. ภูมิมีโกโก้อยู่ 3 แก้วและปองมีโกโก้อยู่ 18 แก้ว รวมกันเป็นกี่แก้ว?",
+                                "3. พี่ไม้มีน้ำตาล 16 ช้อน จะแบ่งใส่จานละเท่าๆกันจะได้กี่จาน?",
+                                "4. ขณะนี้เวลา 11.30 นาฬิกา อ่านอย่างไร",
+                                "5. เศษหนึ่งส่วนแปดสามารถเขียนในอีกรูปแบบหนึ่งได้อย่างไร",
+                                "6. 8.30 อ่านเป็นหน่วยสตางค์และบาทอย่างไร",
+                                "7. หน่วยในข้อใดมีความยาวมากที่สุด",
+                                "8. 1,980,000 อ่านว่าอะไร",
+                                "9. 2 x 18 จะได้ผลลัพธ์เป็นเท่าไหร่",
+                                "10 (8 - 4) + 12) จะได้ผลลัพธ์เป็นเท่าไหร่"
+                            );
                             $p4_choice = array(
                                 ["A. 4 เมตร", "B. 5 เมตร", "C. 6 เมตร", "D. 2 เมตร"],
                                 ["A. 19 แก้ว", "B. 21 แก้ว", "C. 20 แก้ว", "D. ไม่มีสักแก้ว"],
@@ -145,7 +146,7 @@ session_start();
                                 ["A. 26", "B. 36", "C. 16", "D. 20"],
                                 ["A. 16", "B. 7", "C. 5", "D. ไม่มีข้อใดถูกต้อง"]
                             );
-                            $p4_ans = array(1, 2,3, 1,2,4,3,1,2,1);
+                            $p4_ans = array(1, 2, 3, 1, 2, 4, 3, 1, 2, 1);
 
                             //Grade 5
                             $p5_problem = array(
@@ -231,7 +232,7 @@ session_start();
 
         <footer class="footer-section bg-dark">
             <div class="container">
-                <div class="row">
+                <div class="row pb-5">
                     <div class="col-md-4">
                         <h3 class="text-white">เกี่ยวกับพวกเรา</h3>
                         <p>เว็บนี้เป็นส่วนหนึงของวิชาเว็บเทคโนโลยี
@@ -254,28 +255,6 @@ session_start();
                 </div>
 
             </div>
-
-            <div class="row pt-5 mt-5 text-center">
-                <div class="col-md-12">
-                    <div class=" pt-5">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved |
-                            This
-                            template is made
-                            with
-                            <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-    </div>
     </footer>
 
     </div>

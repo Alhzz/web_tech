@@ -81,13 +81,12 @@ session_start();
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li><a onclick="window.location.href='../index.html#'" href="../index.html#" class="nav-link">หน้าแรก</a></li>
-                                <li><a onclick="window.location.href='../index.html#course-section'"  href="../index.html#course-section" class="nav-link">บทเรียน</a></li>
-                                <li><a onclick="window.location.href='../index.html#schedule-section'"  href="../index.html#schedule-section" class="nav-link">แบบฝึกหัด</a></li>
+                                <li><a onclick="window.location.href='../index.html#course-section'" href="../index.html#course-section" class="nav-link">บทเรียน</a></li>
+                                <li><a onclick="window.location.href='../index.html#schedule-section'" href="../index.html#schedule-section" class="nav-link">แบบฝึกหัด</a></li>
                                 <li><a onclick="window.location.href='../index.html#trainer-section'" href="../index.html#trainer-section" class="nav-link">ผู้จัดทำ</a></li>
                             </ul>
                         </nav>
-                        <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span
-                                class="icon-menu h3"></span></a>
+                        <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>
                     </div>
 
                 </div>
@@ -106,20 +105,21 @@ session_start();
                         $ans = $_SESSION['ans'];
                         $score = 0;
 
-                        function errorHandlerCatchUndefinedIndex($errno, $errstr, $errfile, $errline ) {
+                        function errorHandlerCatchUndefinedIndex($errno, $errstr, $errfile, $errline)
+                        {
                             // In case Undefined index
                             if (substr($errstr, 0, 16) == 'Undefined index:' or 'Undefined offset') {
-                             throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
-                           } 
+                                throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
+                            }
                             return false;
                         }
                         for ($i = 0; $i < count($problem); $i++) {
                             set_error_handler("errorHandlerCatchUndefinedIndex");
-                            try{
-                            if ($ans[$i] == $_POST['p' . $i] + 1) {
-                                $score += 10;
-                            }}
-                            catch(Exception $e){
+                            try {
+                                if ($ans[$i] == $_POST['p' . $i] + 1) {
+                                    $score += 10;
+                                }
+                            } catch (Exception $e) {
                                 restore_error_handler();
                             }
                             restore_error_handler();
@@ -164,7 +164,7 @@ session_start();
 
         <footer class="footer-section bg-dark">
             <div class="container">
-                <div class="row">
+                <div class="row pb-5">
                     <div class="col-md-4">
                         <h3 class="text-white">เกี่ยวกับพวกเรา</h3>
                         <p>เว็บนี้เป็นส่วนหนึงของวิชาเว็บเทคโนโลยี
@@ -187,28 +187,6 @@ session_start();
                 </div>
 
             </div>
-
-            <div class="row pt-5 mt-5 text-center">
-                <div class="col-md-12">
-                    <div class=" pt-5">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved |
-                            This
-                            template is made
-                            with
-                            <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-    </div>
     </footer>
 
     </div>
