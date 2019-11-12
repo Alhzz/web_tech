@@ -32,6 +32,10 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
+        .class-item:hover {
+            z-index: 2;
+            background: #3a8bfd;
+        }
         h1,
         h2,
         h3,
