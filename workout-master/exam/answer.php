@@ -57,6 +57,13 @@ session_start();
         .ans {
             padding: 15px 30px;
         }
+        .green {
+            background-color: #C1EFB8;
+        }
+
+        .green:hover {
+            background-color: #C1EFB8;
+        }
     </style>
 
 </head>
@@ -142,16 +149,16 @@ session_start();
                 <div class="form-check">
                     <div class="row">
                         <?php
-
-                        $problem = $_SESSION['problem'];
                         $choice = $_SESSION['choice'];
-                        $ans = $_SESSION['ans'];
+                    
 
                         for ($i = 0; $i < count($problem); $i++) {
                             echo '<div class="col-lg-12"><div class="d-flex align-items-center"><div class="problem">';
                             echo '<h3>' . $problem[$i] . '</h3>';
                             echo ' </div></div>';
-                            echo '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center"><div class="class-item-text ans">';
+                            echo '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center green"><div class="class-item-text ans">';
+                            echo '<h2>' . $choice[$i][$ans[$i] - 1] . '</h2>';
+                            echo '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center green"><div class="class-item-text ans">';
                             echo '<h2>' . $choice[$i][$ans[$i] - 1] . '</h2>';
                             echo '</div></div></div></div></div>';
                         }
@@ -182,7 +189,7 @@ session_start();
 
                     <div class="col-md-4">
                         <h3 class="text-white">ข้อมูลเพิ่มเติม</h3>
-                        <p>สามารถดูข้อมูลเพิ่มเติมได้ที่ <br><a href="http://10.0.15.12/wtprojects/wtpg26">wtprojects/wtpg26</a></p>
+                        <p>สามารถดูข้อมูลเพิ่มเติมได้ที่ <br><a href="../more_detail/project_webtech.pdf">project_webtech.pdf</a></p>
                     </div>
                 </div>
 
