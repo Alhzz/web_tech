@@ -32,6 +32,11 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
+        .class-item:hover {
+            z-index: 2;
+            background: #3a8bfd;
+        }
+
         h1,
         h2,
         h3,
@@ -100,6 +105,7 @@ session_start();
                 <div class="row align-items-center justify-content-center text-center">
                     <div class="col-md-7">
                         <h2 class="">ตัวอย่างข้อสอบ</h2>
+
                         <?php
                         $which = $_GET['num'];
                         echo '<p class="lead mx-auto desc mb-5">ชั้นประถมศึกษาปีที่ ' . $which . '</p>';
@@ -205,15 +211,15 @@ session_start();
                                 echo '<h2>' . ${'p' . $which . '_problem'}[$i] . '</h2>';
                                 echo '</div></div><div class="row"><div class="col-lg-6">';
                                 for ($j = 0; $j < 2; $j++) {
-                                    echo '<div class="class-item d-flex align-items-center">';
-                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="' . $j . '">';
+                                    echo '<div class="class-item d-flex align-items-center c'.$i.'">';
+                                    echo '<div class="class-item-text ans "><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="' . $j . '"onclick="myColor('.$i.', '.$j.') ">';
                                     echo '<h2>' . ${'p' . $which . '_choice'}[$i][$j] . '</h2>';
                                     echo '</div></div>';
                                 }
                                 echo '</div><div class="col-lg-6">';
                                 for ($j = 2; $j < 4; $j++) {
-                                    echo '<div class="class-item d-flex align-items-center">';
-                                    echo '<div class="class-item-text ans"><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="' . $j . '">';
+                                    echo '<div class="class-item d-flex align-items-center c'.$i.'">';
+                                    echo '<div class="class-item-text ans" ><input class="form-check-input" type="radio" name="p' . $i . '" id="p' . $i . '" value="' . $j . '"onclick="myColor('.$i.', '.$j.') ">';
                                     echo '<h2>' . ${'p' . $which . '_choice'}[$i][$j] . '</h2>';
                                     echo '</div></div>';
                                 }
@@ -229,6 +235,7 @@ session_start();
 
             </div>
         </div>
+
 
         <footer class="footer-section bg-dark">
             <div class="container">
@@ -255,7 +262,7 @@ session_start();
                 </div>
 
             </div>
-    </footer>
+        </footer>
 
     </div>
     <!-- .site-wrap -->
@@ -273,9 +280,16 @@ session_start();
     <script src="../js/aos.js"></script>
     <script src="../js/jquery.fancybox.min.js"></script>
     <script src="../js/jquery.sticky.js"></script>
-    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="../js/main.js"></script>
+    <script>
+        function myColor(x, y){
+            $('.c'+x).css("background-color", '');
+            document.querySelectorAll('.c'+x)[y].style.background = "#F7F888";
+        }
+
+        
+    </script>
 
 </body>
 
