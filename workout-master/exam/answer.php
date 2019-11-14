@@ -158,8 +158,6 @@ session_start();
                             echo ' </div></div>';
                             echo '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center green"><div class="class-item-text ans">';
                             echo '<h2>' . $choice[$i][$ans[$i] - 1] . '</h2>';
-                            echo '<div class="row"><div class="col-lg-6"><div class="class-item d-flex align-items-center green"><div class="class-item-text ans">';
-                            echo '<h2>' . $choice[$i][$ans[$i] - 1] . '</h2>';
                             echo '</div></div></div></div></div>';
                         }
                         ?>
